@@ -14,7 +14,8 @@ dotenv.config();
 
 let PORT = process.env.PORT || 5000;
 let URL = process.env.MONGO_DB;
-console.log(URL);
+
+mongoose.set("strictQuery", false);
 mongoose.connect(URL)
   .then(() => {
     app.listen(PORT, () => {
