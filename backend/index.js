@@ -24,7 +24,7 @@ mongoose.connect(URL)
   })
   .catch((error) => console.log(error));
 
-app.get("/api", (req, res) => {
+app.get("/", (req, res) => {
   res.send("Api Working");
 });
 
