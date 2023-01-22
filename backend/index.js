@@ -15,10 +15,7 @@ dotenv.config();
 let PORT = process.env.PORT || 5000;
 let URL = process.env.MONGO_DB;
 console.log(URL);
-mongoose.connect(URL, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-})
+mongoose.connect(URL)
   .then(() => {
     app.listen(PORT, () => {
       console.log(`Listening at ${PORT}`);
